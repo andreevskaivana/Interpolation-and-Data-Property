@@ -4,7 +4,8 @@
 app=Vue.createApp({
     data(){
         return{
-            courseGoal:'Finish the course and Learn Vue',
+            courseGoalA:'Finish the course and Learn Vue',
+            courseGoalB:'Master Vue and build amazing apps',
             vueLink:'https://vuejs.org/' //we want to bimd this link in html
         };
     },
@@ -12,8 +13,8 @@ app=Vue.createApp({
         outputGoal(){
             const randomNumber=Math.random();
             if(randomNumber<0.5){
-            return 'Learn Vue'}
-            else {return 'Master Vue'};
+            return this.courseGoalA;}
+            else {return this.courseGoalB};
         }
     }
 });
@@ -37,3 +38,6 @@ app.mount('#user-goal')
 //everything inside methods needs to be a function so it could be called
 
 //methods:functions defined in a on object
+
+
+//all the data is merged and stored in a global instance-THIS
