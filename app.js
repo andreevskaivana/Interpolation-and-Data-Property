@@ -7,6 +7,14 @@ app=Vue.createApp({
             courseGoal:'Finish the course and Learn Vue',
             vueLink:'https://vuejs.org/' //we want to bimd this link in html
         };
+    },
+    methods:{
+        outputGoal(){
+            const randomNumber=Math.random();
+            if(randomNumber<0.5){
+            return 'Learn Vue'}
+            else {return 'Master Vue'};
+        }
     }
 });
 
@@ -22,3 +30,10 @@ app.mount('#user-goal')
 //the directive for links is v bind:href 
 //we insert the link in the data in vue not in the html file, we just reference the data object in the html file where we have the link stored
 //we reference links WITHOUT {{}}
+
+//methods option allows u to define functions which should execute when something happens
+//data-function methods-takes an object that is full with functions
+//methods is a reserved object
+//everything inside methods needs to be a function so it could be called
+
+//methods:functions defined in a on object
