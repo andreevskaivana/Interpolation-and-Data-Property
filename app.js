@@ -4,7 +4,8 @@
 app=Vue.createApp({
     data(){
         return{
-            courseGoal:'Finish the course and Learn Vue'
+            courseGoal:'Finish the course and Learn Vue',
+            vueLink:'https://vuejs.org/' //we want to bimd this link in html
         };
     }
 });
@@ -13,3 +14,11 @@ app=Vue.createApp({
 //mount holds a string->we insert the selector of the tag we want to control
 
 app.mount('#user-goal')
+
+
+// the syntax {{}} is only available between opening and closing HTML tags-anywhere where we would output actual content
+//if we weant to pass a dynamic value to an attribute-href dynamically is passed
+//we use a different syntax->vue directive
+//the directive for links is v bind:href 
+//we insert the link in the data in vue not in the html file, we just reference the data object in the html file where we have the link stored
+//we reference links WITHOUT {{}}
